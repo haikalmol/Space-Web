@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" media="all" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <!--header-->
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+            <g fill="none" fill-rule="evenodd">
+              <circle cx="24" cy="24" r="24" fill="#FFF" />
+              <path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z" />
+            </g>
+          </svg>
+        </div>
+        <div class="st_line"></div>
+        <div class="menu">
+          <div class="list">
+            <div class="option one" data-id="1">
+              <div class="num">00</div>
+              <div class="text">HOME</div>
+              <div class="underline active"></div>
+            </div>
+            <div class="option two" data-id="2">
+              <div class="num">01</div>
+              <div class="text">DESTINATION</div>
+              <div class="underline"></div>
+            </div>
+            <div class="option three" data-id="3">
+              <div class="num">02</div>
+              <div class="text">CREW</div>
+              <div class="underline"></div>
+            </div>
+            <div class="option four" data-id="4">
+              <div class="num">03</div>
+              <div class="text">TECHNOLOGY</div>
+              <div class="underline"></div>
+            </div>
+          </div>
+        </div>
+        <div class="bar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
+            <g fill="#D0D6F9" fill-rule="evenodd">
+              <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <aside class="media_menu">
+      <div class="cross">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21">
+          <g fill="#D0D6F9" fill-rule="evenodd">
+            <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" />
+            <path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z" />
+          </g>
+        </svg>
+      </div>
+      <div class="menu">
+        <div class="option one active" data-id="1">
+          <div class="num">00</div>
+          <div class="text">HOME</div>
+          <div class="underline"></div>
+        </div>
+        <div class="option two" data-id="2">
+          <div class="num">01</div>
+          <div class="text">DESTINATION</div>
+          <div class="underline"></div>
+        </div>
+        <div class="option three" data-id="3">
+          <div class="num">02</div>
+          <div class="text">CREW</div>
+          <div class="underline"></div>
+        </div>
+        <div class="option four" data-id="4">
+          <div class="num">03</div>
+          <div class="text">TECHNOLOGY</div>
+          <div class="underline"></div>
+        </div>
+      </div>
+    </aside>
+    <!--header-->
+
+    <!--home and planet section-->
+    <div class="result_section"></div>
+    <!--home and planet section-->
+
+    <!--crew section-->
+    <div class="crew_section">
+      <div class="crew_text_section">
+        <div class="welcome">
+          <div class="num">02</div>
+          <div class="text">meet your crew</div>
+        </div>
+        <div class="crew_info"></div>
+        <div class="selectors">
+          <div class="crew_ele active" data-id="0"></div>
+          <div class="crew_ele" data-id="1"></div>
+          <div class="crew_ele" data-id="2"></div>
+          <div class="crew_ele" data-id="3"></div>
+        </div>
+      </div>
+      <div class="crew_img_section"></div>
+    </div>
+    <!--crew section-->
+
+    <!--technology section-->
+    <div class="technology_section">
+      <div class="technology_text">
+        <div class="welcome">
+          <div class="num">03</div>
+          <div class="text">Space Launce 101</div>
+        </div>
+        <div class="technology_info">
+          <div class="selectors_technology">
+            <div data-id="0" class="vehicle active">1</div>
+            <div data-id="1" class="vehicle">2</div>
+            <div data-id="2" class="vehicle">3</div>
+          </div>
+          <div class="technology_desc"></div>
+          <div class="technology_image"></div>
+        </div>
+      </div>
+    </div>
+    <!--technology section-->
+  </body>
+  <script src="script.js"></script>
+</html>

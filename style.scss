@@ -1,0 +1,1044 @@
+/*Fonts link*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Bellefair&family=Rubik:wght@300&display=swap");
+/*Fonts link*/
+
+/*Variables*/
+$colorWhite: #ffffff;
+$BarlowStyle: "Barlow Condensed", sans-serif;
+$BelfairStyle: "Bellefair", serif;
+$tab-size: 768px;
+$mobile-size: 380px;
+/*Variables*/
+
+/*mixins and medias*/
+@mixin flexDesign($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin tabContent {
+  @media (max-width: $tab-size) {
+    @content;
+  }
+}
+@mixin mobileContent {
+  @media (max-width: $mobile-size) {
+    @content;
+  }
+}
+/*mixins and medias*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*background images design*/
+.homeImage {
+  background: url("assets/home/background-home-desktop.jpg") no-repeat 100% center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @include tabContent {
+    background-image: url("assets/home/background-home-tablet.jpg");
+  }
+  @include mobileContent {
+    background-image: url("assets/home/background-home-mobile.jpg");
+  }
+}
+.destinationImage {
+  background: url("assets/destination/background-destination-desktop.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @include tabContent {
+    background-image: url("assets/destination/background-destination-tablet.jpg");
+  }
+  @include mobileContent {
+    background-image: url("assets/destination/background-destination-mobile.jpg");
+  }
+}
+.crewImage {
+  background: url("assets/crew/background-crew-desktop.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @include tabContent {
+    background-image: url("assets/crew/background-crew-tablet.jpg");
+  }
+  @include mobileContent {
+    background-image: url("assets/crew/background-crew-mobile.jpg");
+  }
+}
+.technologyImage {
+  background: url("assets/technology/background-technology-desktop.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @include tabContent {
+    background-image: url("assets/technology/background-technology-tablet.jpg");
+  }
+  @include mobileContent {
+    background-image: url("assets/technology/background-technology-mobile.jpg");
+  }
+}
+/*background images design*/
+
+body {
+  height: 0;
+}
+
+/*header design=logo line, menu*/
+.container {
+  width: 100%;
+  .navbar {
+    width: 90%;
+    height: 96px;
+    transform: translateX(11%) translateY(40px);
+    @include flexDesign(row, space-between, center);
+    .st_line {
+      width: 473px;
+      height: 1px;
+      background-color: #a8a8a8;
+      transform: translateX(7%);
+      z-index: 33333;
+      @include tabContent {
+        display: none;
+      }
+    }
+    .menu {
+      width: 80%;
+      min-width: 456px;
+      font-family: $BarlowStyle;
+      @include tabContent {
+        max-width: 450px;
+        min-width: 200px;
+      }
+      @include mobileContent {
+        display: none;
+      }
+      height: 96px;
+      position: relative;
+      backdrop-filter: blur(7px) saturate(200%);
+      -webkit-backdrop-filter: blur(7px) saturate(200%);
+      background-color: rgba(255, 255, 255, 0.12);
+      @include flexDesign(row, center, center);
+      .list {
+        width: 70%;
+        @include tabContent {
+          max-width: 356px;
+        }
+        height: 19px;
+        @include flexDesign(row, space-around, center);
+        .one {
+          .underline {
+            display: none;
+            width: 70px;
+            height: 3px;
+            @include tabContent {
+              width: 36px;
+            }
+          }
+        }
+        .two {
+          .underline {
+            display: none;
+            width: 127px;
+            height: 3px;
+            @include tabContent {
+              width: 87px;
+            }
+          }
+        }
+        .three {
+          .underline {
+            display: none;
+            width: 71px;
+            height: 3px;
+            @include tabContent {
+              width: 35px;
+            }
+          }
+        }
+        .four {
+          .underline {
+            display: none;
+            width: 127px;
+            height: 3px;
+            @include tabContent {
+              width: 87px;
+            }
+          }
+        }
+        .option {
+          margin-right: 10px;
+          @include flexDesign(row, space-between, center);
+          position: relative;
+          [class^="underline"] {
+            position: absolute;
+            top: 54px;
+            left: -10px;
+            background-color: $colorWhite;
+          }
+          &:hover {
+            .underline {
+              display: block;
+              background-color: #ffffffbe;
+            }
+          }
+          .active {
+            display: block;
+          }
+          .num {
+            padding-right: 6px;
+            font-weight: 800;
+            @include tabContent {
+              display: none;
+            }
+          }
+          .text {
+            @include tabContent {
+              font-size: clamp(12px, 1px, 15px);
+            }
+          }
+          .text,
+          .num {
+            color: $colorWhite;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .bar {
+      display: none;
+      cursor: pointer;
+      transform: translateX(-10px);
+      @include mobileContent {
+        display: block;
+      }
+    }
+  }
+}
+/*header design=logo line, menu*/
+
+/*mobile menu design*/
+.media_menu {
+  display: none;
+  width: 254px;
+  height: 100vh;
+  position: fixed;
+  font-family: $BarlowStyle;
+  z-index: 11111;
+  backdrop-filter: blur(7px) saturate(200%);
+  -webkit-backdrop-filter: blur(7px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.12);
+  top: 0;
+  right: 0;
+  .cross {
+    width: 100%;
+    height: 120px;
+    @include flexDesign(row, flex-end, center);
+    svg {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  }
+  .menu {
+    @include flexDesign(column, flex-start, flex-end);
+    .option {
+      width: 230px;
+      height: 40px;
+      @include flexDesign(row, flex-start, center);
+      .num {
+        padding-right: 15px;
+      }
+      .num,
+      .text {
+        color: $colorWhite;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .active {
+      border-right: 4px solid $colorWhite;
+    }
+  }
+}
+/*mobile menu design*/
+
+/*home section and planet section design*/
+.result_section {
+  width: 100%;
+  height: 400px;
+  transform: translateY(230px);
+  @include flexDesign(row, center, center);
+
+  /*home section design*/
+
+  .result_container {
+    width: 80%;
+    height: 350px;
+    @include flexDesign(row, center, center);
+    @include tabContent {
+      @include flexDesign(column, center, center);
+    }
+    .text,
+    .exp_img {
+      width: 50%;
+      color: $colorWhite;
+      @include tabContent {
+        width: 100%;
+      }
+    }
+    .exp_img {
+      @include flexDesign(row, center, center);
+    }
+    .text {
+      @include tabContent {
+        @include flexDesign(column, center, center);
+      }
+      .sub_header {
+        width: 430px;
+        height: 34px;
+        font-size: clamp(24px, 1px, 28px);
+        word-spacing: 4.75px;
+        font-family: $BelfairStyle;
+        @include tabContent {
+          width: 280px;
+          height: 24px;
+          font-size: 18px;
+          text-align: center;
+        }
+        @include mobileContent {
+          width: 217px;
+        }
+      }
+      .header {
+        width: 445px;
+        height: 172px;
+        font-size: clamp(130px, 2px, 150px);
+        font-family: $BarlowStyle;
+        @include tabContent {
+          text-align: center;
+          max-width: 375px;
+        }
+        @include mobileContent {
+          max-width: 317px;
+        }
+      }
+      .desc {
+        width: 80%;
+        height: 128px;
+        font-size: 17px;
+        line-break: auto;
+        text-align: justify;
+        transform: translateY(10px);
+        @include tabContent {
+          text-align: center;
+          width: 95%;
+          height: 112px;
+        }
+        @include mobileContent {
+          width: 327px;
+          height: 125px;
+        }
+      }
+    }
+    .exp_img {
+      .exp_box {
+        font-size: 32px;
+        letter-spacing: 2px;
+        font-family: $BelfairStyle;
+        width: 274px;
+        height: 274px;
+        margin-bottom: 80px;
+        @include tabContent {
+          width: 242px;
+          height: 242px;
+          transform: translateY(30px);
+        }
+        @include mobileContent {
+          width: 150px;
+          height: 150px;
+        }
+        background-color: $colorWhite;
+        border-radius: 50%;
+        color: #0b0d17;
+        @include flexDesign(row, center, center);
+        cursor: pointer;
+        transition: box-shadow 0.5s;
+        &:hover {
+          box-shadow: 0px 0px 0px 40px #ffffff25;
+        }
+      }
+    }
+  }
+
+  /*home section design*/
+
+  /*planet section design*/
+
+  .planetContaining {
+    width: 100%;
+    height: 100%;
+    @include flexDesign(row, center, flex-start);
+    @include tabContent {
+      @include flexDesign(column, center, center);
+      position: relative;
+      top: -130px;
+    }
+    .planetSection {
+      width: 90%;
+      height: auto;
+      @include flexDesign(row, flex-start, flex-start);
+      @include tabContent {
+        @include flexDesign(column, center, center);
+      }
+      .planerWelcome {
+        width: 50%;
+        height: 100%;
+        @include flexDesign(column, space-between, flex-start);
+        @include tabContent {
+          width: 100%;
+        }
+        .welcomeText {
+          @include flexDesign(row, space-between, flex-start);
+          position: relative;
+          top: -130px;
+          left: 100px;
+          @include tabContent {
+            width: 100%;
+            @include flexDesign(row, flex-start, flex-start);
+            left: 10px;
+            top: -90px;
+          }
+          @include mobileContent {
+            top: -150px;
+          }
+          .num {
+            margin-right: 20px;
+            color: #ffffff3d;
+          }
+          .text {
+            color: $colorWhite;
+          }
+          .num,
+          .text {
+            font-size: clamp(24px, 1px, 28px);
+            word-spacing: 4.75px;
+            font-family: $BelfairStyle;
+            @include tabContent {
+              font-size: 20px;
+            }
+          }
+        }
+        .planet {
+          @include tabContent {
+            width: 100%;
+            height: auto;
+            @include flexDesign(row, center, center);
+          }
+          .planetSize {
+            width: 100%;
+            height: 350px;
+            @include flexDesign(row, center, center);
+            transform: translateX(130px) translateY(-80px);
+            @include tabContent {
+              width: 200px;
+              height: 200px;
+              transform: translateX(0px) translateY(-80px);
+            }
+            @include mobileContent {
+              width: 170px;
+              height: 170px;
+              transform: translateX(0px) translateY(-100px);
+            }
+          }
+        }
+      }
+    }
+    .plantOpDesc {
+      width: 50%;
+      @include tabContent {
+        width: 100%;
+        @include flexDesign(column, center, center);
+        height: 0px;
+        margin-top: 30px;
+      }
+      .planetOpt {
+        width: 55%;
+        height: 34px;
+        @include flexDesign(row, space-between, flex-start);
+        color: $colorWhite;
+        font-size: 16px;
+        letter-spacing: 2.35px;
+        font-family: $BarlowStyle;
+        position: relative;
+        top: -90px;
+        left: -10%;
+        @include tabContent {
+          width: 80%;
+          @include flexDesign(row, space-between, center);
+          left: 0;
+          top: 50px;
+        }
+        @include mobileContent {
+          top: 90px;
+        }
+        .planet {
+          position: relative;
+          margin-right: 20px;
+          &:hover {
+            cursor: pointer;
+            .underline {
+              display: block;
+              background-color: #ffffffbe;
+            }
+          }
+        }
+        .one {
+          .underline {
+            display: none;
+            width: 41px;
+            height: 3px;
+            background-color: $colorWhite;
+            position: absolute;
+            top: 30px;
+            left: -1px;
+          }
+        }
+        .two {
+          .underline {
+            display: none;
+            width: 41px;
+            height: 3px;
+            background-color: $colorWhite;
+            position: absolute;
+            top: 30px;
+            left: -1px;
+          }
+        }
+        .three {
+          .underline {
+            display: none;
+            width: 56px;
+            height: 3px;
+            background-color: $colorWhite;
+            position: absolute;
+            top: 30px;
+            left: -1px;
+          }
+        }
+        .four {
+          .underline {
+            display: none;
+            width: 43px;
+            height: 3px;
+            background-color: $colorWhite;
+            position: absolute;
+            top: 30px;
+            left: -1px;
+          }
+        }
+        .active {
+          .underline {
+            display: block;
+          }
+        }
+      }
+    }
+    .currentPlanetName {
+      width: 100%;
+      font-size: 100px;
+      font-family: $BelfairStyle;
+      color: $colorWhite;
+      text-transform: uppercase;
+      position: relative;
+      top: -70px;
+      left: -10%;
+      @include tabContent {
+        width: 100%;
+        @include flexDesign(row, center, center);
+        font-size: 80px;
+        left: 0;
+        top: 70px;
+      }
+      @include mobileContent {
+        top: 100px;
+      }
+    }
+    .currentPlanetDesc {
+      text-align: justify;
+      color: white;
+      width: 80%;
+      position: relative;
+      top: -60px;
+      left: -10%;
+      @include tabContent {
+        left: 0;
+        text-align: center;
+        top: 80px;
+      }
+      @include mobileContent {
+        top: 110px;
+      }
+    }
+    .border_line {
+      width: 80%;
+      height: 2px;
+      background-color: #383b4b;
+      position: relative;
+      left: -10%;
+      margin-bottom: 20px;
+      @include tabContent {
+        width: 80%;
+        left: 10%;
+        margin-bottom: 0px;
+        position: absolute;
+        bottom: -20%;
+      }
+      @include mobileContent {
+        bottom: -30%;
+      }
+    }
+    .planetInfo {
+      width: 60%;
+      height: auto;
+      position: relative;
+      left: -10%;
+      transform: translateX(20%) translateY(20%);
+      @include flexDesign(row, space-between, flex-start);
+      @include tabContent {
+        width: 80%;
+        left: 0;
+        top: 120px;
+        @include flexDesign(row, space-between, center);
+        transform: translateX(0%);
+      }
+      @include mobileContent {
+        @include flexDesign(column, center, center);
+        top: 170px;
+      }
+      .planetDst,
+      .planetTime {
+        margin-right: 20px;
+        @include flexDesign(column, space-between, flex-start);
+        @include tabContent {
+          transform: translateX(15%);
+        }
+        .dstDes,
+        .timeDesc {
+          font-size: 14px;
+          font-family: $BarlowStyle;
+          color: #d0d6f9;
+          margin-bottom: 10px;
+        }
+        .dstNum,
+        .timeNum {
+          font-size: 28px;
+          font-family: $BelfairStyle;
+          color: $colorWhite;
+          text-transform: uppercase;
+          @include tabContent {
+            font-size: 20px;
+          }
+        }
+        @include mobileContent {
+          @include flexDesign(column, center, center);
+        }
+      }
+      .planetDst,
+      .planetTime {
+        width: 280px;
+        margin-bottom: 20px;
+        @include mobileContent {
+          position: relative;
+          left: -10%;
+        }
+      }
+    }
+  }
+}
+/*planet section design*/
+/*home section and planet section design*/
+
+/*crew section design*/
+.crew_section {
+  visibility: hidden;
+  @include flexDesign(row, space-around, flex-end);
+  @include tabContent {
+    @include flexDesign(column, center, center);
+  }
+  .crew_text_section {
+    width: 50%;
+    @include tabContent {
+      width: 100%;
+    }
+    position: relative;
+    .welcome {
+      width: 250px;
+      @include flexDesign(row, space-between, flex-start);
+      position: absolute;
+      top: -300px;
+      left: 20%;
+      @include tabContent {
+        left: 5%;
+        width: 220px;
+      }
+      @include mobileContent {
+        width: 100%;
+        left: 0;
+        @include flexDesign(row, center, center);
+      }
+      .num {
+        color: #ffffff3d;
+        @include mobileContent {
+          margin-right: 10px;
+        }
+      }
+      .text {
+        color: $colorWhite;
+        text-transform: uppercase;
+      }
+      .num,
+      .text {
+        font-size: clamp(24px, 1px, 28px);
+        word-spacing: 4.75px;
+        font-family: $BelfairStyle;
+        @include tabContent {
+          font-size: 20px;
+        }
+        @include mobileContent {
+          font-size: 16px;
+        }
+      }
+    }
+    .crew_info {
+      @include flexDesign(column, space-between, flex-start);
+      @include tabContent {
+        width: 80%;
+        position: relative;
+        top: -30px;
+      }
+      @include mobileContent {
+        width: 100%;
+        @include flexDesign(column, center, center);
+        top: 350px;
+      }
+      .crew_position {
+        font-family: $BelfairStyle;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #ffffff65;
+        position: absolute;
+        top: -180px;
+        left: 20%;
+        @include tabContent {
+          width: 125%;
+          left: 0;
+          font-size: 24px;
+          @include flexDesign(row, center, center);
+        }
+        @include mobileContent {
+          width: 100%;
+          left: 0;
+          font-size: 16px;
+          @include flexDesign(row, center, center);
+        }
+      }
+      .crew_member_name {
+        color: $colorWhite;
+        font-family: $BelfairStyle;
+        text-transform: uppercase;
+        font-size: 56px;
+        position: absolute;
+        width: 100%;
+        top: -120px;
+        left: 20%;
+        @include tabContent {
+          width: 125%;
+          text-align: center;
+          left: 0;
+          font-size: 40px;
+          @include flexDesign(row, center, center);
+        }
+        @include mobileContent {
+          width: 100%;
+          left: 0;
+          font-size: 24px;
+          @include flexDesign(row, center, center);
+        }
+      }
+      .commander_info {
+        color: $colorWhite;
+        width: 70%;
+        font-family: $BarlowStyle;
+        text-transform: uppercase;
+        font-size: 18px;
+        position: absolute;
+        top: -10px;
+        left: 20%;
+        text-align: justify;
+        margin-top: 20px;
+        @include tabContent {
+          width: 125%;
+          left: 0;
+          top: -40px;
+          margin-top: 10px;
+          font-size: 16px;
+          @include flexDesign(row, center, center);
+          div {
+            width: 60%;
+            text-align: center;
+          }
+        }
+        @include mobileContent {
+          width: 100%;
+          left: 0;
+          top: -40px;
+          margin-top: 0px;
+          font-size: 16px;
+          @include flexDesign(row, center, center);
+          div {
+            width: 80%;
+            text-align: center;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    .selectors {
+      width: 132px;
+      @include flexDesign(row, space-around, center);
+      position: absolute;
+      top: 150px;
+      left: 20%;
+      .crew_ele {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #979797;
+        cursor: pointer;
+        @include tabContent {
+          margin-right: 10px;
+          width: 10px;
+          height: 10px;
+          margin-top: 30px;
+        }
+      }
+      .active {
+        background-color: $colorWhite;
+      }
+      @include tabContent {
+        width: 100%;
+        left: 0;
+        top: 80px;
+        @include flexDesign(row, center, center);
+      }
+    }
+  }
+  .crew_img_section {
+    width: 50%;
+    position: relative;
+    @include tabContent {
+      width: 100%;
+      @include flexDesign(row, center, center);
+    }
+    .crewPhoto {
+      position: absolute;
+      top: -305px;
+      width: 460px;
+      height: 550px;
+      @include tabContent {
+        width: 400px;
+        height: 500px;
+        top: 140px;
+      }
+      @include mobileContent {
+        width: 50%;
+        height: 323px;
+        border-bottom: 3px solid #383b4b;
+        top: -250px;
+        left: 30%;
+      }
+    }
+  }
+}
+.showCrew {
+  visibility: visible;
+}
+/*crew section design*/
+
+/*technology section design*/
+.technology_section {
+  visibility: hidden;
+  .technology_text {
+    @include flexDesign(column, flex-start, flex-start);
+    position: relative;
+    .welcome {
+      width: 250px;
+      @include flexDesign(row, space-between, flex-start);
+      position: absolute;
+      top: -300px;
+      left: 10%;
+      @include tabContent {
+        left: 12%;
+        width: 220px;
+      }
+      @include mobileContent {
+        width: 100%;
+        left: 0;
+        @include flexDesign(row, center, center);
+      }
+      .num {
+        color: #ffffff3d;
+        @include mobileContent {
+          margin-right: 10px;
+        }
+      }
+      .text {
+        color: $colorWhite;
+        text-transform: uppercase;
+      }
+      .num,
+      .text {
+        font-size: clamp(24px, 1px, 28px);
+        word-spacing: 4.75px;
+        font-family: $BelfairStyle;
+        @include tabContent {
+          font-size: 20px;
+        }
+        @include mobileContent {
+          font-size: 16px;
+        }
+      }
+    }
+    .technology_info {
+      width: 100%;
+      position: relative;
+      top: -200px;
+      @include flexDesign(row, space-between, center);
+      @include tabContent {
+        @include flexDesign(column, center, center);
+      }
+      .selectors_technology {
+        width: 20%;
+        @include flexDesign(column, space-between, center);
+        @include tabContent {
+          width: 100%;
+          @include flexDesign(row, center, center);
+          position: relative;
+          top: 350px;
+        }
+        .vehicle {
+          margin-bottom: 20px;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          border: 3px solid #ffffff49;
+          @include flexDesign(row, center, center);
+          margin-left: 15%;
+          font-family: $BelfairStyle;
+          font-size: 32px;
+          color: $colorWhite;
+          cursor: pointer;
+          &:hover {
+            border: 3px solid $colorWhite;
+          }
+          @include tabContent {
+            width: 58px;
+            height: 58px;
+            margin: 0px 10px;
+          }
+        }
+        .active {
+          background-color: $colorWhite;
+          color: #0b0d17;
+        }
+      }
+      .technology_desc {
+        width: 40%;
+        position: relative;
+        top: -140px;
+        @include flexDesign(column, space-between, flex-start);
+        @include tabContent {
+          width: 100%;
+          @include flexDesign(column, center, center);
+          top: 380px;
+        }
+        .desc_sub_header {
+          font-family: $BarlowStyle;
+          font-size: 16px;
+          color: #d0d6f9;
+          text-transform: uppercase;
+        }
+        .desc_header {
+          font-family: $BelfairStyle;
+          font-size: 56px;
+          text-transform: uppercase;
+          text-align: justify;
+          color: $colorWhite;
+          position: absolute;
+          top: 40px;
+          @include tabContent {
+            font-size: 40px;
+            text-align: center;
+          }
+          @include mobileContent {
+            font-size: 24px;
+          }
+        }
+        .vehicle_info {
+          @include flexDesign(row, flex-start, flex-start);
+          font-family: $BarlowStyle;
+          color: $colorWhite;
+          text-align: justify;
+          position: absolute;
+          top: 180px;
+          @include tabContent {
+            @include flexDesign(row, center, center);
+            text-align: center;
+            top: 100px;
+            padding-bottom: 20px;
+          }
+          div {
+            width: 65%;
+          }
+        }
+      }
+      .technology_image {
+        width: 40%;
+        @include flexDesign(row, flex-end, flex-end);
+        @include tabContent {
+          width: 100%;
+          @include flexDesign(row, center, center);
+          position: relative;
+        }
+        .tech_img {
+          width: 100%;
+          height: 70%;
+          transform: translateX(-2px);
+          @include tabContent {
+            height: 310px;
+            position: absolute;
+            top: -100px;
+          }
+        }
+      }
+    }
+  }
+}
+.showTechnology {
+  visibility: visible;
+}
+/*technology section design*/

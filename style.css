@@ -1,0 +1,2088 @@
+/*Fonts link*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Bellefair&family=Rubik:wght@300&display=swap");
+/*Fonts link*/
+/*Variables*/
+/*Variables*/
+/*mixins and medias*/
+/*mixins and medias*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*background images design*/
+.homeImage {
+  background: url("assets/home/background-home-desktop.jpg") no-repeat 100% center fixed;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .homeImage {
+    background-image: url("assets/home/background-home-tablet.jpg");
+  }
+}
+
+@media (max-width: 380px) {
+  .homeImage {
+    background-image: url("assets/home/background-home-mobile.jpg");
+  }
+}
+
+.destinationImage {
+  background: url("assets/destination/background-destination-desktop.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .destinationImage {
+    background-image: url("assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+@media (max-width: 380px) {
+  .destinationImage {
+    background-image: url("assets/destination/background-destination-mobile.jpg");
+  }
+}
+
+.crewImage {
+  background: url("assets/crew/background-crew-desktop.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .crewImage {
+    background-image: url("assets/crew/background-crew-tablet.jpg");
+  }
+}
+
+@media (max-width: 380px) {
+  .crewImage {
+    background-image: url("assets/crew/background-crew-mobile.jpg");
+  }
+}
+
+.technologyImage {
+  background: url("assets/technology/background-technology-desktop.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .technologyImage {
+    background-image: url("assets/technology/background-technology-tablet.jpg");
+  }
+}
+
+@media (max-width: 380px) {
+  .technologyImage {
+    background-image: url("assets/technology/background-technology-mobile.jpg");
+  }
+}
+
+/*background images design*/
+body {
+  height: 0;
+}
+
+/*header design=logo line, menu*/
+.container {
+  width: 100%;
+}
+
+.container .navbar {
+  width: 90%;
+  height: 96px;
+  -webkit-transform: translateX(11%) translateY(40px);
+  transform: translateX(11%) translateY(40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.container .navbar .st_line {
+  width: 473px;
+  height: 1px;
+  background-color: #a8a8a8;
+  -webkit-transform: translateX(7%);
+  transform: translateX(7%);
+  z-index: 33333;
+}
+
+@media (max-width: 768px) {
+  .container .navbar .st_line {
+    display: none;
+  }
+}
+
+.container .navbar .menu {
+  width: 80%;
+  min-width: 456px;
+  font-family: "Barlow Condensed", sans-serif;
+  height: 96px;
+  position: relative;
+  backdrop-filter: blur(7px) saturate(200%);
+  -webkit-backdrop-filter: blur(7px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.12);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .container .navbar .menu {
+    max-width: 450px;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container .navbar .menu {
+    display: none;
+  }
+}
+
+.container .navbar .menu .list {
+  width: 70%;
+  height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .container .navbar .menu .list {
+    max-width: 356px;
+  }
+}
+
+.container .navbar .menu .list .one .underline {
+  display: none;
+  width: 70px;
+  height: 3px;
+}
+
+@media (max-width: 768px) {
+  .container .navbar .menu .list .one .underline {
+    width: 36px;
+  }
+}
+
+.container .navbar .menu .list .two .underline {
+  display: none;
+  width: 127px;
+  height: 3px;
+}
+
+@media (max-width: 768px) {
+  .container .navbar .menu .list .two .underline {
+    width: 87px;
+  }
+}
+
+.container .navbar .menu .list .three .underline {
+  display: none;
+  width: 71px;
+  height: 3px;
+}
+
+@media (max-width: 768px) {
+  .container .navbar .menu .list .three .underline {
+    width: 35px;
+  }
+}
+
+.container .navbar .menu .list .four .underline {
+  display: none;
+  width: 127px;
+  height: 3px;
+}
+
+@media (max-width: 768px) {
+  .container .navbar .menu .list .four .underline {
+    width: 87px;
+  }
+}
+
+.container .navbar .menu .list .option {
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.container .navbar .menu .list .option [class^="underline"] {
+  position: absolute;
+  top: 54px;
+  left: -10px;
+  background-color: #ffffff;
+}
+
+.container .navbar .menu .list .option:hover .underline {
+  display: block;
+  background-color: #ffffffbe;
+}
+
+.container .navbar .menu .list .option .active {
+  display: block;
+}
+
+.container .navbar .menu .list .option .num {
+  padding-right: 6px;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .container .navbar .menu .list .option .num {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container .navbar .menu .list .option .text {
+    font-size: clamp(12px, 1px, 15px);
+  }
+}
+
+.container .navbar .menu .list .option .text,
+.container .navbar .menu .list .option .num {
+  color: #ffffff;
+}
+
+.container .navbar .menu .list .option .text:hover,
+.container .navbar .menu .list .option .num:hover {
+  cursor: pointer;
+}
+
+.container .navbar .bar {
+  display: none;
+  cursor: pointer;
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+
+@media (max-width: 380px) {
+  .container .navbar .bar {
+    display: block;
+  }
+}
+
+/*header design=logo line, menu*/
+/*mobile menu design*/
+.media_menu {
+  display: none;
+  width: 254px;
+  height: 100vh;
+  position: fixed;
+  font-family: "Barlow Condensed", sans-serif;
+  z-index: 11111;
+  backdrop-filter: blur(7px) saturate(200%);
+  -webkit-backdrop-filter: blur(7px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.12);
+  top: 0;
+  right: 0;
+}
+
+.media_menu .cross {
+  width: 100%;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.media_menu .cross svg {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.media_menu .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.media_menu .menu .option {
+  width: 230px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.media_menu .menu .option .num {
+  padding-right: 15px;
+}
+
+.media_menu .menu .option .num,
+.media_menu .menu .option .text {
+  color: #ffffff;
+}
+
+.media_menu .menu .option .num:hover,
+.media_menu .menu .option .text:hover {
+  cursor: pointer;
+}
+
+.media_menu .menu .active {
+  border-right: 4px solid #ffffff;
+}
+
+/*mobile menu design*/
+/*home section and planet section design*/
+.result_section {
+  width: 100%;
+  height: 400px;
+  -webkit-transform: translateY(230px);
+  transform: translateY(230px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /*home section design*/
+  /*home section design*/
+  /*planet section design*/
+}
+
+.result_section .result_container {
+  width: 80%;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .result_section .result_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.result_section .result_container .text,
+.result_section .result_container .exp_img {
+  width: 50%;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .result_section .result_container .text,
+  .result_section .result_container .exp_img {
+    width: 100%;
+  }
+}
+
+.result_section .result_container .exp_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .result_section .result_container .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.result_section .result_container .text .sub_header {
+  width: 430px;
+  height: 34px;
+  font-size: clamp(24px, 1px, 28px);
+  word-spacing: 4.75px;
+  font-family: "Bellefair", serif;
+}
+
+@media (max-width: 768px) {
+  .result_section .result_container .text .sub_header {
+    width: 280px;
+    height: 24px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .result_section .result_container .text .sub_header {
+    width: 217px;
+  }
+}
+
+.result_section .result_container .text .header {
+  width: 445px;
+  height: 172px;
+  font-size: clamp(130px, 2px, 150px);
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .result_section .result_container .text .header {
+    text-align: center;
+    max-width: 375px;
+  }
+}
+
+@media (max-width: 380px) {
+  .result_section .result_container .text .header {
+    max-width: 317px;
+  }
+}
+
+.result_section .result_container .text .desc {
+  width: 80%;
+  height: 128px;
+  font-size: 17px;
+  line-break: auto;
+  text-align: justify;
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+@media (max-width: 768px) {
+  .result_section .result_container .text .desc {
+    text-align: center;
+    width: 95%;
+    height: 112px;
+  }
+}
+
+@media (max-width: 380px) {
+  .result_section .result_container .text .desc {
+    width: 327px;
+    height: 125px;
+  }
+}
+
+.result_section .result_container .exp_img .exp_box {
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-family: "Bellefair", serif;
+  width: 274px;
+  height: 274px;
+  margin-bottom: 80px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: #0b0d17;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
+@media (max-width: 768px) {
+  .result_section .result_container .exp_img .exp_box {
+    width: 242px;
+    height: 242px;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+}
+
+@media (max-width: 380px) {
+  .result_section .result_container .exp_img .exp_box {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.result_section .result_container .exp_img .exp_box:hover {
+  -webkit-box-shadow: 0px 0px 0px 40px #ffffff25;
+  box-shadow: 0px 0px 0px 40px #ffffff25;
+}
+
+.result_section .planetContaining {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    top: -130px;
+  }
+}
+
+.result_section .planetContaining .planetSection {
+  width: 90%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .planetSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.result_section .planetContaining .planetSection .planerWelcome {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .planetSection .planerWelcome {
+    width: 100%;
+  }
+}
+
+.result_section .planetContaining .planetSection .planerWelcome .welcomeText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  position: relative;
+  top: -130px;
+  left: 100px;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .planetSection .planerWelcome .welcomeText {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    left: 10px;
+    top: -90px;
+  }
+}
+
+@media (max-width: 380px) {
+  .result_section .planetContaining .planetSection .planerWelcome .welcomeText {
+    top: -150px;
+  }
+}
+
+.result_section .planetContaining .planetSection .planerWelcome .welcomeText .num {
+  margin-right: 20px;
+  color: #ffffff3d;
+}
+
+.result_section .planetContaining .planetSection .planerWelcome .welcomeText .text {
+  color: #ffffff;
+}
+
+.result_section .planetContaining .planetSection .planerWelcome .welcomeText .num,
+.result_section .planetContaining .planetSection .planerWelcome .welcomeText .text {
+  font-size: clamp(24px, 1px, 28px);
+  word-spacing: 4.75px;
+  font-family: "Bellefair", serif;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .planetSection .planerWelcome .welcomeText .num,
+  .result_section .planetContaining .planetSection .planerWelcome .welcomeText .text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .planetSection .planerWelcome .planet {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.result_section .planetContaining .planetSection .planerWelcome .planet .planetSize {
+  width: 100%;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transform: translateX(130px) translateY(-80px);
+  transform: translateX(130px) translateY(-80px);
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .planetSection .planerWelcome .planet .planetSize {
+    width: 200px;
+    height: 200px;
+    -webkit-transform: translateX(0px) translateY(-80px);
+    transform: translateX(0px) translateY(-80px);
+  }
+}
+
+@media (max-width: 380px) {
+  .result_section .planetContaining .planetSection .planerWelcome .planet .planetSize {
+    width: 170px;
+    height: 170px;
+    -webkit-transform: translateX(0px) translateY(-100px);
+    transform: translateX(0px) translateY(-100px);
+  }
+}
+
+.result_section .planetContaining .plantOpDesc {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .plantOpDesc {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 0px;
+    margin-top: 30px;
+  }
+}
+
+.result_section .planetContaining .plantOpDesc .planetOpt {
+  width: 55%;
+  height: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 2.35px;
+  font-family: "Barlow Condensed", sans-serif;
+  position: relative;
+  top: -90px;
+  left: -10%;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .plantOpDesc .planetOpt {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    left: 0;
+    top: 50px;
+  }
+}
+
+@media (max-width: 380px) {
+  .result_section .planetContaining .plantOpDesc .planetOpt {
+    top: 90px;
+  }
+}
+
+.result_section .planetContaining .plantOpDesc .planetOpt .planet {
+  position: relative;
+  margin-right: 20px;
+}
+
+.result_section .planetContaining .plantOpDesc .planetOpt .planet:hover {
+  cursor: pointer;
+}
+
+.result_section .planetContaining .plantOpDesc .planetOpt .planet:hover .underline {
+  display: block;
+  background-color: #ffffffbe;
+}
+
+.result_section .planetContaining .plantOpDesc .planetOpt .one .underline {
+  display: none;
+  width: 41px;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 30px;
+  left: -1px;
+}
+
+.result_section .planetContaining .plantOpDesc .planetOpt .two .underline {
+  display: none;
+  width: 41px;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 30px;
+  left: -1px;
+}
+
+.result_section .planetContaining .plantOpDesc .planetOpt .three .underline {
+  display: none;
+  width: 56px;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 30px;
+  left: -1px;
+}
+
+.result_section .planetContaining .plantOpDesc .planetOpt .four .underline {
+  display: none;
+  width: 43px;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 30px;
+  left: -1px;
+}
+
+.result_section .planetContaining .plantOpDesc .planetOpt .active .underline {
+  display: block;
+}
+
+.result_section .planetContaining .currentPlanetName {
+  width: 100%;
+  font-size: 100px;
+  font-family: "Bellefair", serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+  top: -70px;
+  left: -10%;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .currentPlanetName {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 80px;
+    left: 0;
+    top: 70px;
+  }
+}
+
+@media (max-width: 380px) {
+  .result_section .planetContaining .currentPlanetName {
+    top: 100px;
+  }
+}
+
+.result_section .planetContaining .currentPlanetDesc {
+  text-align: justify;
+  color: white;
+  width: 80%;
+  position: relative;
+  top: -60px;
+  left: -10%;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .currentPlanetDesc {
+    left: 0;
+    text-align: center;
+    top: 80px;
+  }
+}
+
+@media (max-width: 380px) {
+  .result_section .planetContaining .currentPlanetDesc {
+    top: 110px;
+  }
+}
+
+.result_section .planetContaining .border_line {
+  width: 80%;
+  height: 2px;
+  background-color: #383b4b;
+  position: relative;
+  left: -10%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .border_line {
+    width: 80%;
+    left: 10%;
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: -20%;
+  }
+}
+
+@media (max-width: 380px) {
+  .result_section .planetContaining .border_line {
+    bottom: -30%;
+  }
+}
+
+.result_section .planetContaining .planetInfo {
+  width: 60%;
+  height: auto;
+  position: relative;
+  left: -10%;
+  -webkit-transform: translateX(20%) translateY(20%);
+  transform: translateX(20%) translateY(20%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .planetInfo {
+    width: 80%;
+    left: 0;
+    top: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: 380px) {
+  .result_section .planetContaining .planetInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    top: 170px;
+  }
+}
+
+.result_section .planetContaining .planetInfo .planetDst,
+.result_section .planetContaining .planetInfo .planetTime {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .planetInfo .planetDst,
+  .result_section .planetContaining .planetInfo .planetTime {
+    -webkit-transform: translateX(15%);
+    transform: translateX(15%);
+  }
+}
+
+.result_section .planetContaining .planetInfo .planetDst .dstDes,
+.result_section .planetContaining .planetInfo .planetDst .timeDesc,
+.result_section .planetContaining .planetInfo .planetTime .dstDes,
+.result_section .planetContaining .planetInfo .planetTime .timeDesc {
+  font-size: 14px;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #d0d6f9;
+  margin-bottom: 10px;
+}
+
+.result_section .planetContaining .planetInfo .planetDst .dstNum,
+.result_section .planetContaining .planetInfo .planetDst .timeNum,
+.result_section .planetContaining .planetInfo .planetTime .dstNum,
+.result_section .planetContaining .planetInfo .planetTime .timeNum {
+  font-size: 28px;
+  font-family: "Bellefair", serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .result_section .planetContaining .planetInfo .planetDst .dstNum,
+  .result_section .planetContaining .planetInfo .planetDst .timeNum,
+  .result_section .planetContaining .planetInfo .planetTime .dstNum,
+  .result_section .planetContaining .planetInfo .planetTime .timeNum {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .result_section .planetContaining .planetInfo .planetDst,
+  .result_section .planetContaining .planetInfo .planetTime {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.result_section .planetContaining .planetInfo .planetDst,
+.result_section .planetContaining .planetInfo .planetTime {
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 380px) {
+  .result_section .planetContaining .planetInfo .planetDst,
+  .result_section .planetContaining .planetInfo .planetTime {
+    position: relative;
+    left: -10%;
+  }
+}
+
+/*planet section design*/
+/*home section and planet section design*/
+/*crew section design*/
+.crew_section {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .crew_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.crew_section .crew_text_section {
+  width: 50%;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .crew_section .crew_text_section {
+    width: 100%;
+  }
+}
+
+.crew_section .crew_text_section .welcome {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  position: absolute;
+  top: -300px;
+  left: 20%;
+}
+
+@media (max-width: 768px) {
+  .crew_section .crew_text_section .welcome {
+    left: 5%;
+    width: 220px;
+  }
+}
+
+@media (max-width: 380px) {
+  .crew_section .crew_text_section .welcome {
+    width: 100%;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.crew_section .crew_text_section .welcome .num {
+  color: #ffffff3d;
+}
+
+@media (max-width: 380px) {
+  .crew_section .crew_text_section .welcome .num {
+    margin-right: 10px;
+  }
+}
+
+.crew_section .crew_text_section .welcome .text {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.crew_section .crew_text_section .welcome .num,
+.crew_section .crew_text_section .welcome .text {
+  font-size: clamp(24px, 1px, 28px);
+  word-spacing: 4.75px;
+  font-family: "Bellefair", serif;
+}
+
+@media (max-width: 768px) {
+  .crew_section .crew_text_section .welcome .num,
+  .crew_section .crew_text_section .welcome .text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .crew_section .crew_text_section .welcome .num,
+  .crew_section .crew_text_section .welcome .text {
+    font-size: 16px;
+  }
+}
+
+.crew_section .crew_text_section .crew_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .crew_section .crew_text_section .crew_info {
+    width: 80%;
+    position: relative;
+    top: -30px;
+  }
+}
+
+@media (max-width: 380px) {
+  .crew_section .crew_text_section .crew_info {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    top: 350px;
+  }
+}
+
+.crew_section .crew_text_section .crew_info .crew_position {
+  font-family: "Bellefair", serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #ffffff65;
+  position: absolute;
+  top: -180px;
+  left: 20%;
+}
+
+@media (max-width: 768px) {
+  .crew_section .crew_text_section .crew_info .crew_position {
+    width: 125%;
+    left: 0;
+    font-size: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .crew_section .crew_text_section .crew_info .crew_position {
+    width: 100%;
+    left: 0;
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.crew_section .crew_text_section .crew_info .crew_member_name {
+  color: #ffffff;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  font-size: 56px;
+  position: absolute;
+  width: 100%;
+  top: -120px;
+  left: 20%;
+}
+
+@media (max-width: 768px) {
+  .crew_section .crew_text_section .crew_info .crew_member_name {
+    width: 125%;
+    text-align: center;
+    left: 0;
+    font-size: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .crew_section .crew_text_section .crew_info .crew_member_name {
+    width: 100%;
+    left: 0;
+    font-size: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.crew_section .crew_text_section .crew_info .commander_info {
+  color: #ffffff;
+  width: 70%;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  position: absolute;
+  top: -10px;
+  left: 20%;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .crew_section .crew_text_section .crew_info .commander_info {
+    width: 125%;
+    left: 0;
+    top: -40px;
+    margin-top: 10px;
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .crew_section .crew_text_section .crew_info .commander_info div {
+    width: 60%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .crew_section .crew_text_section .crew_info .commander_info {
+    width: 100%;
+    left: 0;
+    top: -40px;
+    margin-top: 0px;
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .crew_section .crew_text_section .crew_info .commander_info div {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.crew_section .crew_text_section .selectors {
+  width: 132px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 150px;
+  left: 20%;
+}
+
+.crew_section .crew_text_section .selectors .crew_ele {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #979797;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .crew_section .crew_text_section .selectors .crew_ele {
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+    margin-top: 30px;
+  }
+}
+
+.crew_section .crew_text_section .selectors .active {
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .crew_section .crew_text_section .selectors {
+    width: 100%;
+    left: 0;
+    top: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.crew_section .crew_img_section {
+  width: 50%;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .crew_section .crew_img_section {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.crew_section .crew_img_section .crewPhoto {
+  position: absolute;
+  top: -305px;
+  width: 460px;
+  height: 550px;
+}
+
+@media (max-width: 768px) {
+  .crew_section .crew_img_section .crewPhoto {
+    width: 400px;
+    height: 500px;
+    top: 140px;
+  }
+}
+
+@media (max-width: 380px) {
+  .crew_section .crew_img_section .crewPhoto {
+    width: 50%;
+    height: 323px;
+    border-bottom: 3px solid #383b4b;
+    top: -250px;
+    left: 30%;
+  }
+}
+
+.showCrew {
+  visibility: visible;
+}
+
+/*crew section design*/
+/*technology section design*/
+.technology_section {
+  visibility: hidden;
+}
+
+.technology_section .technology_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.technology_section .technology_text .welcome {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  position: absolute;
+  top: -300px;
+  left: 10%;
+}
+
+@media (max-width: 768px) {
+  .technology_section .technology_text .welcome {
+    left: 12%;
+    width: 220px;
+  }
+}
+
+@media (max-width: 380px) {
+  .technology_section .technology_text .welcome {
+    width: 100%;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.technology_section .technology_text .welcome .num {
+  color: #ffffff3d;
+}
+
+@media (max-width: 380px) {
+  .technology_section .technology_text .welcome .num {
+    margin-right: 10px;
+  }
+}
+
+.technology_section .technology_text .welcome .text {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.technology_section .technology_text .welcome .num,
+.technology_section .technology_text .welcome .text {
+  font-size: clamp(24px, 1px, 28px);
+  word-spacing: 4.75px;
+  font-family: "Bellefair", serif;
+}
+
+@media (max-width: 768px) {
+  .technology_section .technology_text .welcome .num,
+  .technology_section .technology_text .welcome .text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .technology_section .technology_text .welcome .num,
+  .technology_section .technology_text .welcome .text {
+    font-size: 16px;
+  }
+}
+
+.technology_section .technology_text .technology_info {
+  width: 100%;
+  position: relative;
+  top: -200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .technology_section .technology_text .technology_info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.technology_section .technology_text .technology_info .selectors_technology {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .technology_section .technology_text .technology_info .selectors_technology {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    top: 350px;
+  }
+}
+
+.technology_section .technology_text .technology_info .selectors_technology .vehicle {
+  margin-bottom: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #ffffff49;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 15%;
+  font-family: "Bellefair", serif;
+  font-size: 32px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.technology_section .technology_text .technology_info .selectors_technology .vehicle:hover {
+  border: 3px solid #ffffff;
+}
+
+@media (max-width: 768px) {
+  .technology_section .technology_text .technology_info .selectors_technology .vehicle {
+    width: 58px;
+    height: 58px;
+    margin: 0px 10px;
+  }
+}
+
+.technology_section .technology_text .technology_info .selectors_technology .active {
+  background-color: #ffffff;
+  color: #0b0d17;
+}
+
+.technology_section .technology_text .technology_info .technology_desc {
+  width: 40%;
+  position: relative;
+  top: -140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .technology_section .technology_text .technology_info .technology_desc {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    top: 380px;
+  }
+}
+
+.technology_section .technology_text .technology_info .technology_desc .desc_sub_header {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  color: #d0d6f9;
+  text-transform: uppercase;
+}
+
+.technology_section .technology_text .technology_info .technology_desc .desc_header {
+  font-family: "Bellefair", serif;
+  font-size: 56px;
+  text-transform: uppercase;
+  text-align: justify;
+  color: #ffffff;
+  position: absolute;
+  top: 40px;
+}
+
+@media (max-width: 768px) {
+  .technology_section .technology_text .technology_info .technology_desc .desc_header {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .technology_section .technology_text .technology_info .technology_desc .desc_header {
+    font-size: 24px;
+  }
+}
+
+.technology_section .technology_text .technology_info .technology_desc .vehicle_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #ffffff;
+  text-align: justify;
+  position: absolute;
+  top: 180px;
+}
+
+@media (max-width: 768px) {
+  .technology_section .technology_text .technology_info .technology_desc .vehicle_info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    top: 100px;
+    padding-bottom: 20px;
+  }
+}
+
+.technology_section .technology_text .technology_info .technology_desc .vehicle_info div {
+  width: 65%;
+}
+
+.technology_section .technology_text .technology_info .technology_image {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .technology_section .technology_text .technology_info .technology_image {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+  }
+}
+
+.technology_section .technology_text .technology_info .technology_image .tech_img {
+  width: 100%;
+  height: 70%;
+  -webkit-transform: translateX(-2px);
+  transform: translateX(-2px);
+}
+
+@media (max-width: 768px) {
+  .technology_section .technology_text .technology_info .technology_image .tech_img {
+    height: 310px;
+    position: absolute;
+    top: -100px;
+  }
+}
+
+.showTechnology {
+  visibility: visible;
+}
+
+/*technology section design*/
+/*# sourceMappingURL=style.css.map */
